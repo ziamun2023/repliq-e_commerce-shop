@@ -1,4 +1,48 @@
 $(document).ready(function() {
+
+    $(document).ready(function() {
+        const carousel = $('.carousel');
+        const items = $('.item');
+        const prevButton = $('.prev');
+        const nextButton = $('.next');
+        let currentIndex = 0;
+      
+        prevButton.click(function() {
+          if (currentIndex > 0) {
+            currentIndex--;
+            updateCarousel();
+          }
+        });
+      
+        nextButton.click(function() {
+          if (currentIndex < items.length - 3) {
+            currentIndex++;
+            updateCarousel();
+          }
+        });
+      
+        function updateCarousel() {
+          const translateValue = currentIndex * -400;
+          carousel.css('transform', `translateX(${translateValue}px)`);
+        }
+      
+        // Auto-scroll the carousel every 2 seconds
+        function autoScroll() {
+          setInterval(function() {
+            if (currentIndex < items.length - 3) {
+              currentIndex++;
+            } else {
+              currentIndex = 0;
+            }
+            updateCarousel();
+          }, 4000);
+        }
+      
+        autoScroll(); // Start auto-scrolling
+      });
+      
+
+
     $(".navbar a").click(function(event) {
         event.preventDefault(); // Prevent the default behavior of anchor links
 

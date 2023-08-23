@@ -40,7 +40,7 @@ nav {
   top: 0;
   z-index: 1;
    display: grid;
-   background-color: white;
+   /* background-color: white; */
 
 
 
@@ -77,7 +77,7 @@ nav {
 }
 
 .navbar a.active {
-  color: rgb(200,162,214);
+  color: rgb(253, 75, 52);
   font-weight: 500;
  /* Set the color you want for the active link */
 
@@ -103,4 +103,56 @@ nav {
 .cart{
 
   overflow: hidden;
+}
+
+
+
+
+/* ------------- */
+.carousel-container {
+  position: relative;
+  width: 1200px; 
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+/* column-gap: 20px; */
+  transition: transform 0.5s ease-in-out;
+}
+
+.item {
+  width: 400px;
+  height: 400px;
+
+  flex-shrink: 0;
+  background-color:rgb(230,230,230);
+
+}
+
+.nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-color: #ccc;
+  font-size: 24px;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+
+
+.font1{
+  font-family: 'PT Sans Narrow', sans-serif;
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import Banner from '../../AllComponent/Banner/Banner';
+import Popularproduct from '../../AllComponent/PopularProduct/Popularproduct';
 
 const Home = () => {
     return (
@@ -12,6 +13,7 @@ const Home = () => {
  
     </section>
     <section id="service" className="section lg:mt-0 mt-[260px]">
+        <Popularproduct/>
 
     
     </section>
