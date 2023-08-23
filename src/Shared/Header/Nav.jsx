@@ -5,7 +5,7 @@ const Nav = () => {
     return (
         <nav className="border-b-2 flex justify-around">
       
-        <ul className="navbar">
+        <ul className="navbar font1 text-2xl tracking-wider gap-4">
          
       <li ><a href="#home">home</a>
             </li>
@@ -15,7 +15,7 @@ const Nav = () => {
        
      
         </ul>
-     <div>   <Link to='/login'>Log in</Link>
+     <div className='font1 text-2xl tracking-wider'>   <Link to='/login'>Log in</Link>
        </div>
     </nav>
     );

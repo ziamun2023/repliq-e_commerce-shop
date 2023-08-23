@@ -41,25 +41,25 @@ const Login = () => {
             <div>
           
               <input
-                type='text'
+                type='number'
                 name='name'
-                placeholder='Enter Your Name Here'
-                className='  bg-[rgb(247,247,247)] py-2 px-3'
+                placeholder='Number'
+                className='  bg-[rgb(247,247,247)] mt-6 border-b-2 border-red-500 py-2 px-3'
               />
 
-<p className='bg-black w-52 h-[2px] mx-auto'></p>
+
             </div>
          
             <div>
           
           <input
-            type='text'
+            type='password'
             name='number'
-            placeholder='number'
-            className='  bg-[rgb(247,247,247)] py-2 px-3'
+            placeholder='password'
+            className='  bg-[rgb(247,247,247)] mt-6 border-b-2 border-red-500 py-2 px-3'
           />
 
-<p className='bg-black w-52 h-[2px] mx-auto'></p>
+
         </div>
    
          
