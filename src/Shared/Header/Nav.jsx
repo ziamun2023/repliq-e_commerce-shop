@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../AuthProvider';
 
 const Nav = () => {
+    const {user}=useContext(AuthContext)
+    console.log(user);
+
     return (
         <nav className="border-b-2 flex justify-around">
       
-        <ul className="navbar font1 text-2xl tracking-wider gap-4">
+        <ul className="navbar  text-2xl tracking-wider gap-4">
          
       <li ><a href="#home">home</a>
             </li>
@@ -15,8 +19,17 @@ const Nav = () => {
        
      
         </ul>
-     <div className='font1 text-2xl tracking-wider'>   <Link to='/login'>Log in</Link>
-       </div>
+      {user?  "":<div className='font1 text-2xl tracking-wider'>   <Link to='/login'>Log in</Link>
+     
+     </div> }
+     {user?.role==="Admin"?<div className='font1 text-2xl tracking-wider'>   <Link to='/admindashboard'>dashboard</Link>
+     
+     </div> :""}
+     
+
+
+   
+   
     </nav>
     );
 };

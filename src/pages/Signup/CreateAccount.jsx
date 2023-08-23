@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import AOS from 'aos';
 import JSAlert from 'js-alert'
 import img from "../../assets/login1.jpg"
@@ -10,6 +10,13 @@ import 'aos/dist/aos.css'; // You can also use <link> for styles
 AOS.init();
 // onSubmit={handleSUbmit}
 const CreateAccount = () => {
+    const [selectedRole, setSelectedRole] = useState('User');
+    console.log(selectedRole)
+
+    const handleRoleChange = (newRole) => {
+      setSelectedRole(newRole);
+    };
+
     const notify = () => toast("account created successfully!");
     // const refresh=()=>{
     //     window.location.reload();
@@ -22,7 +29,7 @@ const CreateAccount = () => {
     const email=event.target.email.value
     const phoneNumber=parseInt(event.target.number.value)
     const password=event.target.password.value
-    const role='user'
+    const role=selectedRole
   
     // const formdata= new FormData() 
     const info={name,email,password,role,phoneNumber}
@@ -44,12 +51,14 @@ const CreateAccount = () => {
         const itemJSON = JSON.stringify(info);
           localStorage.setItem('ownerInfo', itemJSON);
           localStorage.setItem('access-token', result.token)
-          navigate('/home')
+      
           if(result?.error===true){
             JSAlert.alert(message);
+            navigate('/signup')
         }
         else{
             JSAlert.alert("Succesfuly your account created");
+            navigate('/home')
         }
       
         //   refresh()
@@ -95,11 +104,41 @@ const CreateAccount = () => {
      Sign up
     </NavLink>
   </nav>
-<div className='text-center mx-auto  rounded-xl lg:w-[400px] h-[400px] lg:h-[500px]  mt-20 '>
+<div className='text-center mx-auto  rounded-xl lg:w-[400px] h-[400px] lg:h-[500px]  mt-10'>
 <form onSubmit={handleSUbmit} data-aos="zoom-out"    data-aos-offset="200"   data-aos-delay="20"
     data-aos-duration="1000"
     data-aos-easing="ease-in-out" >
           <div className=''>
+          <div className=' scale-125'>
+  
+  <dir className='flex justify-center gap-10 -ms-16'>
+  <h2 className='font-bold'>Role Selector</h2>
+  <div>
+        <label>
+          <input
+            type="radio"
+            value="Admin"
+            checked={selectedRole === 'Admin'}
+            onChange={() => handleRoleChange('Admin')}
+          />
+          Admin
+        </label>
+      </div>
+      <div>
+        <label>
+          <input
+            type="radio"
+            value="User"
+            checked={selectedRole === 'User'}
+            onChange={() => handleRoleChange('User')}
+          />
+          User
+        </label>
+      </div>
+  </dir>
+      <p className='font1 my-2 border-2'>Selected role: {selectedRole}</p>
+    </div>
+        
           <div>
           
           <input

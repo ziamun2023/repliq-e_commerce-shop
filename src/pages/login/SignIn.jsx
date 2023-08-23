@@ -20,7 +20,7 @@ const SignIn = () => {
     event.preventDefault()
     // const name =event.target.name.value
     // const email=event.target.email.value
-    const phoneNumber=event.target.number.value
+    const phoneNumber=parseInt(event.target.number.value)
     const password=event.target.password.value
    
   
@@ -29,7 +29,7 @@ const SignIn = () => {
     console.log(info)
    
       
-    fetch(`http://localhost:5000/users`,{
+    fetch(`http://localhost:5000/login`,{
       method:'POST',
       headers:{'content-Type':'application/json'},
       body:JSON.stringify(info)
@@ -39,11 +39,22 @@ const SignIn = () => {
       
       
       if(result){
-        JSAlert.alert("Succesfuly your account created");
-        const itemJSON = JSON.stringify(info);
-          localStorage.setItem('ownerInfo', itemJSON);
-          localStorage.setItem('access-token', result.token)
-          navigate('/home')
+       console.log(result);
+       const message=result?.message
+        // const itemJSON = JSON.stringify(info);
+        const stringify=JSON.stringify(result?.user)
+        localStorage.setItem('access-token', result?.token)
+        localStorage.setItem("ownerInfo", stringify )
+         
+          if(result?.error===true){
+            JSAlert.alert(message);
+            navigate('/login')
+        }
+        else{
+            JSAlert.alert("Succesfuly loged in");
+            navigate('/home')
+        }
+      
       
         //   refresh()
         
