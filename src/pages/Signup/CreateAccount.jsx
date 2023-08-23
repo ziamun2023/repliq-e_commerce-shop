@@ -39,15 +39,22 @@ const CreateAccount = () => {
       
       
       if(result){
-        JSAlert.alert("Succesfuly your account created");
+      const message=result?.message
+      
         const itemJSON = JSON.stringify(info);
           localStorage.setItem('ownerInfo', itemJSON);
           localStorage.setItem('access-token', result.token)
           navigate('/home')
+          if(result?.error===true){
+            JSAlert.alert(message);
+        }
+        else{
+            JSAlert.alert("Succesfuly your account created");
+        }
       
         //   refresh()
         
-    console.log(result)
+    console.log(result.error    )
        }
        else {
         localStorage.removeItem('access-token')
