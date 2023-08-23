@@ -9,7 +9,7 @@ import 'aos/dist/aos.css'; // You can also use <link> for styles
 // ..
 AOS.init();
 // onSubmit={handleSUbmit}
-const CreateAccount = () => {
+const SignIn = () => {
     const notify = () => toast("account created successfully!");
     // const refresh=()=>{
     //     window.location.reload();
@@ -18,14 +18,14 @@ const CreateAccount = () => {
 
   const handleSUbmit=(event)=>{
     event.preventDefault()
-    const name =event.target.name.value
-    const email=event.target.email.value
-    const phoneNumber=parseInt(event.target.number.value)
+    // const name =event.target.name.value
+    // const email=event.target.email.value
+    const phoneNumber=event.target.number.value
     const password=event.target.password.value
-    const role='user'
+   
   
     // const formdata= new FormData() 
-    const info={name,email,password,role,phoneNumber}
+    const info={password,phoneNumber}
     console.log(info)
    
       
@@ -93,7 +93,7 @@ const CreateAccount = () => {
     data-aos-duration="1000"
     data-aos-easing="ease-in-out" >
           <div className=''>
-          <div>
+          {/* <div>
           
           <input
             type='text'
@@ -103,8 +103,8 @@ const CreateAccount = () => {
           />
 
 
-        </div>
-          <div>
+        </div> */}
+          {/* <div>
           
           <input
             type='email'
@@ -114,7 +114,7 @@ const CreateAccount = () => {
           />
 
 
-        </div>
+        </div> */}
             <div>
           
            <div className=''>
@@ -163,4 +163,4 @@ const CreateAccount = () => {
     );
 };
 
-export default CreateAccount;
+export default SignIn;
