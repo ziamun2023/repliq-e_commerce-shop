@@ -21,8 +21,7 @@ export  const router = createBrowserRouter([
       children:[
         {path:'/home',
         element: <Home/>},
-        {path:'/allproduct',
-        element: <Allproducts/>},
+       
 
       
        
@@ -50,7 +49,9 @@ export  const router = createBrowserRouter([
         element:<Myproduct/>
        }
       ]
-    }
+    },
+    {path:'/allproduct',
+    element: <Allproducts/>},
 
   ]);  
 
