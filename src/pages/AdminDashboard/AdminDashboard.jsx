@@ -7,7 +7,7 @@ const AdminDashboard = () => {
         <div className='min-h-[800px] grid grid-cols-5  overflow-y-scroll'>
           
             <div className='flex flex-col  justify-center col-span-1 bg-white '>
-            <img className='absolute top-0 h-[800px] object-cover w-full' src={dash} alt="" />
+            <img className='absolute top-0 h-[800px] object-cover w-full ' src={dash} alt="" />
                 <nav>
                 <NavLink
       activeclassName="navbar__link--active"
@@ -24,6 +24,14 @@ const AdminDashboard = () => {
     >
    My products
    <p className='h-[3px] w-0 group-hover:w-40 bg-red-500 duration-300'></p>
+    </NavLink>
+    <NavLink
+      activeclassName="navbar__link--active"
+      className="navbar__link text-2xl group mx-5 my-4 "
+      to="/home"
+    >
+  Home
+  <p className='h-[3px] w-0 group-hover:w-40 bg-red-500 duration-300'></p>
     </NavLink>
     <NavLink
       activeclassName="navbar__link--active"

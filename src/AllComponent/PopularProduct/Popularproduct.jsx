@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-
+import { Link } from 'react-router-dom';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -59,6 +59,10 @@ const Popularproduct = () => {
 </div>
 
             </div>
+
+     <Link to='/allproduct'>
+     <p className='text-center font1 text-3xl font-bold cursor-pointer hover:text-red-500 duration-150 my-10' >     show all</p></Link>
+
 
             
         </div>

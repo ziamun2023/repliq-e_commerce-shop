@@ -2,7 +2,8 @@ import React from 'react';
 import img from "../../assets/2.png"
 import { FaShoppingCart } from 'react-icons/fa';
 import { AiFillEye } from 'react-icons/Ai';
-const CartDesign1 = () => {
+const CartDesign1 = ({item}) => {
+    // const {picture}=item
     return (
       <div className=''>
           <div className='h-[380px] group duration-300  overflow-hidden relative w-[420px] bg-[rgb(245,247,249)] '>

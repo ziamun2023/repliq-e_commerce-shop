@@ -65,7 +65,7 @@ const Myproduct = () => {
  <div  >
 
 <div className='flex justify-between mx-20'>
-<p className='font1 text-2xl font-bold my-10 '>Products</p>
+<p data-aos="fade-in" className='font1 text-2xl font-bold my-10 '>Products</p>
 <div className='my-auto flex gap-6  '>
     <p data-aos="fade-left"   data-aos-delay="1000"
     data-aos-duration="900"

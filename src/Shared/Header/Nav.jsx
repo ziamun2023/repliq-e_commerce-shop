@@ -22,7 +22,7 @@ const Nav = () => {
       {user?  "":<div className='font1 text-2xl tracking-wider'>   <Link to='/login'>Log in</Link>
      
      </div> }
-     {user?.role==="Admin"?<div className='font1 text-2xl tracking-wider'>   <Link to='/admindashboard'>dashboard</Link>
+     {user?.role==="Admin"?<div className='font1 text-2xl tracking-wider'>   <Link to='/admindashboard/myproduct'>dashboard</Link>
      
      </div> :""}
      

@@ -13,13 +13,16 @@ import SignIn from './pages/login/SignIn';
 import AdminDashboard from './pages/AdminDashboard/AdminDashboard';
 import Addproduct from './pages/AdminDashboard/Addproduct';
 import Myproduct from './pages/AdminDashboard/Myproduct';
+import Allproducts from './AllComponent/PopularProduct/Allproducts';
 export  const router = createBrowserRouter([
     {
-      path: "/home",
+      path: "/",
       element: <Mainlayout></Mainlayout>,
       children:[
         {path:'/home',
         element: <Home/>},
+        {path:'/allproduct',
+        element: <Allproducts/>},
 
       
        

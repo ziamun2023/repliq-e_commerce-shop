@@ -57,30 +57,32 @@ const {user}=useContext(AuthContext)
 
 
     return (
-        <Slide direction='up'>
-            <p className=' text-center text-3xl font1 my-10 text-black'>Add product</p>
-            <div>
+        <>
+           <p data-aos="fade-in" className='font1 text-2xl font-bold my-10 ms-10 '>Add products</p>
+            <div className='border-2 shadow-xl scale-75 mx-10 rounded-md'  data-aos="zoom-out"    data-aos-delay="20"
+    data-aos-duration="1000"
+    data-aos-easing="ease-in-out">
                 <form onSubmit={addNewProperty} className='grid justify-items-center lg:grid-cols-3 gap-4' action="">
                 <div>
     <p className='text-gray-900 text-[17px] font1 mt-3'> sellername</p>
-    <input type="text" value={user?.name} className='w-[300px]  mb-6 py-3 border-b-2 ' name='sellername'  />
+    <input type="text" value={user?.name} className='w-[300px] opacity-40 text-black border-2 border-gray-700  mb-6 py-3 border-b-2 ' name='sellername'  />
     
 </div>
                 <div>
     <p className='text-gray-900 text-[17px] font1 mt-3'> Owner email</p>
-    <input type="text" value={user?.email} className='w-[300px]  mb-6 py-3 border-b-2 ' name='email'  />
+    <input type="text" value={user?.email} className='w-[300px] opacity-40 text-black border-2 border-gray-700  mb-6 py-3 border-b-2 ' name='email'  />
     
 </div>
                 <div>
     <p className='text-gray-900 text-[17px] font1 mt-3'> Name</p>
-    <input type="text" className='w-[300px]  mb-6 py-3 border-b-2 ' name='name'  />
+    <input type="text" className='w-[300px] opacity-40 text-black border-2 border-gray-700  mb-6 py-3 border-b-2 ' name='name'  />
     
 </div>
               
                 <div>
     <p className='text-gray-900 text-[17px] font1 mt-3'> Category</p>
  
-    <select className='w-[300px]  mb-6 py-3 border-b-2 ' value={selectedOption} onChange={handleOptionChange}>
+    <select className='w-[300px] opacity-40 text-black border-2 border-gray-700  mb-6 py-3 border-b-2 ' value={selectedOption} onChange={handleOptionChange}>
           <option value="">Select product Category</option>
           <option value="bag">Bag</option>
           <option value="tshirts">t-shirts</option>
@@ -98,18 +100,18 @@ const {user}=useContext(AuthContext)
                
                 <div>
     <p className='text-gray-900 text-[17px] font1 mt-3'> quantity</p>
-    <input type="text" className='w-[300px]  mb-6 py-3 border-b-2 ' name='quantity'  />
+    <input type="text" className='w-[300px] opacity-40 text-black border-2 border-gray-700  mb-6 py-3 border-b-2 ' name='quantity'  />
     
 </div>
              
                 <div>
     <p className='text-gray-900 text-[17px] font1 mt-3'>  picture,</p>
-    <input type="text" className='w-[300px]  mb-6 py-3 border-b-2 ' name='picture'  />
+    <input type="text" className='w-[300px] opacity-40 text-black border-2 border-gray-700  mb-6 py-3 border-b-2 ' name='picture'  />
     
 </div>
                 <div>
     <p className='text-gray-900 text-[17px] font1 mt-3'> offer starts from</p>
-   <p className='w-[300px]  mb-6 py-3 border-b-2 '> <DatePicker
+   <p className='w-[300px] opacity-40 text-black border-2 border-gray-700  mb-6 py-3 border-b-2 '> <DatePicker
       
       selected={startDate}
       onChange={(date) => setStartDate(date)}
@@ -119,7 +121,7 @@ const {user}=useContext(AuthContext)
                 <div>
     <p className='text-gray-900 text-[17px] font1 mt-3'> offer end date</p>
   
-    <p  className='w-[300px]  mb-6 py-3 border-b-2 '>
+    <p  className='w-[300px] opacity-40 text-black border-2 border-gray-700  mb-6 py-3 border-b-2 '>
     <DatePicker
       
       selected={startDate2}
@@ -129,17 +131,17 @@ const {user}=useContext(AuthContext)
 </div>
                 <div>
     <p className='text-gray-900 text-[17px] font1 mt-3'> price</p>
-    <input type="text" className='w-[300px]  mb-6 py-3 border-b-2 ' name='price'  /> 
+    <input type="text" className='w-[300px] opacity-40 text-black border-2 border-gray-700  mb-6 py-3 border-b-2 ' name='price'  /> 
     
 </div>
                 <div>
     <p className='text-gray-900 text-[17px] font1 mt-3'> rate</p>
-    <input type="text" className='w-[300px]  mb-6 py-3 border-b-2 ' name='rate'  /> 
+    <input type="text" className='w-[300px] opacity-40 text-black border-2 border-gray-700  mb-6 py-3 border-b-2 ' name='rate'  /> 
     
 </div>
                 <div>
     <p className='text-gray-900 text-[17px] font1 mt-3'> Description</p>
-    <input type="text" className='w-[300px]  mb-6 py-3 border-b-2 ' name='Description'  /> 
+    <input type="text" className='w-[300px] opacity-40 text-black border-2 border-gray-700  mb-6 py-3 border-b-2 ' name='Description'  /> 
     
 </div>
                 <div>
@@ -152,7 +154,7 @@ const {user}=useContext(AuthContext)
                 </form>
             </div>
             
-        </Slide>
+        </>
     );
 };
 

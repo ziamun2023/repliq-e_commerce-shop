@@ -1,7 +1,7 @@
 import React from 'react';
 import Banner from '../../AllComponent/Banner/Banner';
 import Popularproduct from '../../AllComponent/PopularProduct/Popularproduct';
-
+import { Link } from 'react-router-dom';
 const Home = () => {
     return (
         <>

@@ -82,23 +82,17 @@ const SignIn = () => {
 <Link to='/home'>            <p className=' shadow-lg bg-red-400  py-2 text-black px-2 right-0 top-5 absolute'>Go Home</p></Link>
          
 
-<nav className="navbar mt-52">
+<div className="flex gap-12  justify-center mt-52">
+
+<Link to='/login'>
+<p className='text-3xl mx-5 font1'>Log in </p>
+</Link>
+<Link to='/signup'>
+
+<p className='text-3xl mx-5 font1'>Sign in </p></Link>
   
-    <NavLink
-      activeclassName="navbar__link--active"
-      className="navbar__link text-3xl mx-5 font1"
-      to="/login"
-    >
-      Login
-    </NavLink>
-    <NavLink
-      activeclassName="navbar__link--active"
-      className="navbar__link text-3xl mx-5 font1"
-      to="/signup"
-    >
-     Sign up
-    </NavLink>
-  </nav>
+   
+  </div>
 <div className='text-center mx-auto  rounded-xl lg:w-[400px] h-[400px] lg:h-[500px]  mt-20 '>
 <form onSubmit={handleSUbmit} data-aos="zoom-out"    data-aos-offset="200"   data-aos-delay="20"
     data-aos-duration="1000"
@@ -158,7 +152,7 @@ const SignIn = () => {
 
           <div>
           
-        <input type="submit" className='border-2  mt-10   py-4 px-8 font-serif text-gray-800    ' value='SIgn Up' />
+        <input type="submit" className='border-2  mt-10   py-4 px-8 font-serif text-gray-800    ' value='Log in' />
       
           </div>
          
