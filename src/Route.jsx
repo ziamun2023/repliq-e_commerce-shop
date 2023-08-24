@@ -15,7 +15,7 @@ import Addproduct from './pages/AdminDashboard/Addproduct';
 import Myproduct from './pages/AdminDashboard/Myproduct';
 export  const router = createBrowserRouter([
     {
-      path: "/",
+      path: "/home",
       element: <Mainlayout></Mainlayout>,
       children:[
         {path:'/home',

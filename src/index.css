@@ -156,3 +156,10 @@ nav {
 .font1{
   font-family: 'PT Sans Narrow', sans-serif;
 }
+
+
+.scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+
